@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pubg</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('1709051694820_resized.jpg'); /* Укажите путь к вашему изображению */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        #scare {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Занимает всю ширину видимого окна */
+            height: 100vh; /* Занимает всю высоту видимого окна */
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            overflow: hidden; /* Скрывает все, что выходит за пределы блока */
+        }
+        #scare img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Покрывает весь экран, сохраняя пропорции */
+        }
+        #button-container {
+            margin-top: 20px;
+        }
+        #show-screamer {
+            background: linear-gradient(45deg, #ff6b6b, #f9ca24, #48dbfb, #1e3799);
+            background-size: 400% 400%;
+            border: none;
+            color: white;
+            padding: 20px 40px; /* Увеличение размеров кнопки */
+            font-size: 20px; /* Увеличение размера шрифта */
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 25px;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: background 0.8s ease, transform 0.2s ease;
+        }
+        #show-screamer:hover {
+            background-position: 100% 0;
+            transform: scale(1.05);
+        }
+        #show-screamer:active {
+            transform: scale(0.95);
+        }
+        h1 {
+            background: linear-gradient(45deg, #00bfff, #1e90ff);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Привет, нажми чтобы получить<br> скин The Fool - M1416</h1>
+        <div id="button-container">
+            <button id="show-screamer">Нажми</button>
+        </div>
+    </div>
+    <div id="scare">
+        <img src="1A7y.gif" alt="Screamer">
+        <audio id="scream-audio" src="kriki-skrimery.mp3" autoplay></audio>
+    </div>
+    <script>
+        function requestFullscreen() {
+            const scare = document.getElementById('scare');
+            const audio = document.getElementById('scream-audio');
+
+            scare.style.display = 'flex';
+            audio.volume = 1.0; // Устанавливаем громкость на максимум
+            audio.play();
+
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                document.documentElement.webkitRequestFullscreen();
+            } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                document.documentElement.msRequestFullscreen();
+            }
+        }
+
+        document.getElementById('show-screamer').addEventListener('click', requestFullscreen);
+    </script>
+</body>
+</html>
