@@ -19,7 +19,9 @@ The site pretends to give a free PUBG skin, but when you click the button – a 
 
 ## 📂 Project Structure
 ├── index.html # Main HTML file
+
 ├── images/ # Contains background, GIF, and other assets
+
 └── README.md # Project description
 
 ---
@@ -36,6 +38,7 @@ The site pretends to give a free PUBG skin, but when you click the button – a 
 
 ## 🛠 Technologies Used
 HTML5
+
 CSS3
 
 ## 📌 Notes
