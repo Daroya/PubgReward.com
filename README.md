@@ -1,7 +1,6 @@
 # 🎮 PubgReward.com (Fun Project)
 
 ![HTML](https://img.shields.io/badge/HTML-100%25-orange?logo=html5)
-![CSS](https://img.shields.io/badge/CSS-styled-blue?logo=css3)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 This is a **fun prank website** I created for a friend.  
