@@ -11,8 +11,7 @@ The site pretends to give a free PUBG skin, but when you click the button – a 
 ## 🚀 Features
 - Fake "PUBG reward" button 🎁  
 - Fullscreen screamer with animation  
-- Loud scary sound effect  
-- Styled with **CSS gradients & animations**  
+- Loud scary sound effect   
 
 ---
 
